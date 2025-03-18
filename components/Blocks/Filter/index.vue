@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <section class="relative mx-auto bottom-[40px] max-w-[1210px] w-full px-10">
-    <div class="grid grid-cols-4 relative shadow w-full">
+    <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 relative shadow w-full">
       <template v-for="item of items">
         <div
             v-if="item.type === EFilterType.Select"
@@ -25,7 +25,7 @@ defineProps<{
 
         <div
             v-if="item.type === EFilterType.Button"
-            class="bg-[#282525] flex justify-center items-center"
+            class="bg-[#282525] px-[42px] py-[22px] flex justify-center items-center"
         >
           <Button variant="link" class="text-white text-[24px] font-normal">
             {{ item.value }}

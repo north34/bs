@@ -22,12 +22,13 @@ defineProps<{
       </slot>
 
       <slot name="menu">
-        <div class="flex text-white [&>*]:font-normal [&>*]:p-0 [&>*]:text-[16px] gap-[20px]">
+        <div class="flex text-white gap-[20px]">
           <Button
             v-for="(item, idx) of menuItems"
             :idx="`btn${idx}`"
             :variant="item.type"
             :class="item.class"
+            class="font-normal p-0 text-[16px] hidden sm:flex"
             @click="item.callback"
           >
             {{ item.name }}
